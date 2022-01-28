@@ -15,18 +15,18 @@ public:
         }
         return nums[ans_index];
     }
-    int is_majority(vector<int>& nums){
-        int count =0;
-        int cand = majorityElement(nums);
-        for(int i=0;i<nums.size();i++)
-            if(nums[i]==cand)
-                count++;
-            if(count>nums.size()/2)
-                return cand;
+//     int is_majority(vector<int>& nums){
+//         int count =0;
+//         int cand = majorityElement(nums);
+//         for(int i=0;i<nums.size();i++)
+//             if(nums[i]==cand)
+//                 count++;
+//             if(count>nums.size()/2)
+//                 return cand;
             
-            else
-                return -1;
+//             else
+//                 return -1;
             
         
-    }
+//     }
 };

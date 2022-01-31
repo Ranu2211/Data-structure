@@ -28,10 +28,14 @@ int main() {
 
 
 string isSubset(int a1[], int a2[], int n, int m) {
-    unordered_set<int> hash(a1,a1+n);
-    // run loop to find all a2 elements in hash
+   unordered_set<int>s1;
+    for(int i=0;i<n;i++)
+    s1.insert(a1[i]);
+    
     for(int i=0;i<m;i++)
-        // if an element is not found in hash return No
-        if(hash.find(a2[i])==hash.end()) return "No";
-    return "Yes";
+    if(s1.find(a2[i])==s1.end()){
+        return "No";
+    }
+     return "Yes";
+    
 }

@@ -100,13 +100,13 @@ class Solution{
     public:
     //Function to find the height of a binary tree.
     int height(struct Node* node){
-        if(node==NULL){
-       return 0;
-   }
-   int left = height(node->left);
-   int right = height(node->right);
-   int res = max(left,right) +1;
-   return res; 
+        // code here
+        if(node==NULL)
+        return NULL;
+        int left = height(node->left);
+        int right = height(node->right);
+        int res = max(left,right)+1;
+        return res;
     }
 };
 

@@ -23,22 +23,34 @@ int main()
 
 string merge (string S1, string S2)
 {
-   string S="";
-    int n1=S1.size();
-    int n2=S2.size();
-    int i=0,j=0;
-     for(int k=0; k<n1+n2; k++)
-     {  
-         if(i<n1)
-         {
-           S+=S1[i];
-         }
-         if(j<n2)
-         {
-           S+=S2[j];
-         }
-         i++;
-         j++;
-     }
-     return S;
-}
+    string merge1 = "";
+       int i=0; int j=0; int k=0;
+       
+       while(i<S1.length() && j<S2.length()){
+           if(k%2==0){
+               merge1 = merge1 + S1[i];
+               i++; 
+           }
+           else{
+               merge1 = merge1 + S2[j];
+               j++;
+           }
+           k++;
+       }
+       
+       while(i<S1.length()){
+           merge1 = merge1 + S1[i];
+           i++;
+       }
+           
+       while(j<S2.length()){
+           merge1 = merge1 + S2[j];j++;}
+           
+     return merge1;            
+   } 
+           
+           
+           
+           
+           
+           

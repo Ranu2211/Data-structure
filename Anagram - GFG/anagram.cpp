@@ -9,22 +9,20 @@ class Solution
     public:
     //Function is to check whether two strings are anagram of each other or not.
     bool isAnagram(string a, string b){
-        if(a==b)
-        return true;
-        if(a.length()!=b.length())
-        return false;
-      unordered_map<char,int>mp;
-    for(int i=0;i<a.length();i++){
-        mp[a[i]]++;
-        mp[b[i]]--;
-    }
-     for(auto it: mp)
-       if(it.second)
-         return false;
-        return true;
-    }
         
-    
+        if(a.length()!=b.length()){
+            return false;
+        }
+        sort(a.begin(),a.end());
+        sort(b.begin(),b.end());
+        for(int i=0;i<a.length();i++){
+            if(a[i]!=b[i]){
+                return false;
+            }
+        }
+        return true;
+        
+    }
 
 };
 

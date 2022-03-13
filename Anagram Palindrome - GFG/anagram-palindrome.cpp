@@ -30,7 +30,7 @@ int isPossible (string S)
     }
     int odd = 0;
     for(int i=0;i<no_of_chars;i++){
-    if(count[i]&1)
+    if(count[i]%2!=0)
        odd++;
     if(odd>1)
     return false;

@@ -1,7 +1,7 @@
 class Solution {
 public:
     int twoCitySchedCost(vector<vector<int>>& costs) {
-       vector<int> diff;
+        vector<int> diff;
         int mincost = 0;
         
         for(int i = 0; i<costs.size(); ++i)
@@ -24,5 +24,6 @@ public:
         
         return  mincost;
         
+    
     }
 };

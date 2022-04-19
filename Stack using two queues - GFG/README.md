@@ -1,5 +1,5 @@
 # Stack using two queues
-## Easy 
+##  Easy 
 <div class="problem-statement">
                 <p></p><p><span style="font-size:18px">Implement a Stack&nbsp;using two queues<strong>&nbsp;q1</strong>&nbsp;and<strong>&nbsp;q2</strong>.</span></p>
 

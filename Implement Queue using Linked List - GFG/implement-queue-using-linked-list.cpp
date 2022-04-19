@@ -78,26 +78,22 @@ void MyQueue:: push(int x)
 {
         QueueNode* t = new QueueNode(x);
         if(front==NULL){
-            front = rear = t;
-            return;
+            front=rear=t;
+            return ;
         }
         else{
             rear->next = t;
             rear = t;
         }
+        
 }
 
 //Function to pop front element from the queue.
 int MyQueue :: pop()
 {
-        
-       
-        if(front==NULL)
+        if(front==-NULL)
         return -1;
-        
-            int res = front->data;
-            front = front->next;
-           
-        
+        int res = front->data;
+        front = front->next;
         return res;
 }

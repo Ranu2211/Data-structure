@@ -1,6 +1,6 @@
 class Solution {
 
-   vector<int>parent; 
+    vector<int>parent; 
 public:
     
     int findParent(int n){
@@ -68,6 +68,6 @@ public:
         
         }
        
-        return ans;   
+        return ans;
     }
 };

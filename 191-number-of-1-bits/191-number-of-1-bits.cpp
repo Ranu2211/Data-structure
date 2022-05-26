@@ -1,10 +1,10 @@
 class Solution {
 public:
     int hammingWeight(uint32_t n) {
-         int cnt=0;  // count of set bit
-        while(n>0){  // iterate until all bits are traversed
+         int cnt=0;  
+        while(n>0){  
 			++cnt;
-            n=n&(n-1); // change the first set bit from right to 0
+           n=n&(n-1); 
         }
         return cnt;
     }

@@ -18,7 +18,9 @@
 &nbsp;       not same, so they are not anagrams.</span></pre>
 
 <p><span style="font-size:18px"><strong>Your Task:</strong></span><br>
-<span style="font-size:18px">You don't need to read input or print anything.Your</span><span style="font-size:18px">task is to complete the function<strong>isAnagram()</strong> which takes the string <strong>a</strong> and string <strong>b</strong> as input parameterand checkif the two strings are an anagram of each other. The functionreturns trueif the strings are anagram else itreturns false.</span></p>
+<span style="font-size:18px">You don't need to read input or print anything. Your&nbsp;</span><span style="font-size:18px">task is to complete the function&nbsp;<strong>isAnagram()</strong> which takes the string <strong>a</strong> and string <strong>b</strong> as input parameter and check if the two strings are an anagram of each other. The function returns true if the strings are anagram else it returns false.</span></p>
+
+<p><span style="font-size:18px">Note: In python, you have to return True or False.</span></p>
 
 <p><span style="font-size:18px"><strong>Expected Time Complexity:</strong>O(|a|+|b|).<br>
 <strong>Expected Auxiliary Space:</strong>O(Number of distinct characters).</span></p>

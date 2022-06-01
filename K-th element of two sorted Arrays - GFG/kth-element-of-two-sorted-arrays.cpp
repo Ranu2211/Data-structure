@@ -9,23 +9,16 @@ class Solution{
     int kthElement(int arr1[], int arr2[], int n, int m, int k)
     {
        //set<int>s;
-       vector<int>v;
-       int c;
-       for(int i =0;i<n;i++){
-          v.push_back(arr1[i]);
-       }
-         for(int i =0;i<m;i++){
-          v.push_back(arr2[i]);
-       }
-       sort(v.begin(),v.end());
-       for(int i=0;i<(m+n);i++){
-          if(i==k)
-          c = v[i-1];
-       }
-       
-      return c;
-       }
-
+      priority_queue<int>maxheap;
+      for(int i=0;i<n;i++)
+      maxheap.push(arr1[i]);
+      for(int i=0;i<m;i++)
+      maxheap.push(arr2[i]);
+      for(int i=0;i<(m+n);i++)
+      if(maxheap.size()>k)
+      maxheap.pop();
+      return maxheap.top();
+    }
 };
 
 // { Driver Code Starts.

@@ -9,16 +9,23 @@ class Solution{
     int kthElement(int arr1[], int arr2[], int n, int m, int k)
     {
        //set<int>s;
-      priority_queue<int>maxheap;
-      for(int i=0;i<n;i++)
-      maxheap.push(arr1[i]);
-      for(int i=0;i<m;i++)
-      maxheap.push(arr2[i]);
-      for(int i=0;i<(m+n);i++)
-      if(maxheap.size()>k)
-      maxheap.pop();
-      return maxheap.top();
-    }
+      int i=0,j=0,p=0;
+       int crr[n+m];
+       while(i<=n-1 && j<=m-1){
+           if(arr1[i]<arr2[j]){
+               crr[p++]=arr1[i++];
+           }
+           else{
+               crr[p++]=arr2[j++];
+           }
+       }
+       while(i<=n-1)
+       crr[p++]=arr1[i++];
+       while(j<=m-1)
+       crr[p++]=arr2[j++];
+       
+       return crr[k-1];
+   }
 };
 
 // { Driver Code Starts.

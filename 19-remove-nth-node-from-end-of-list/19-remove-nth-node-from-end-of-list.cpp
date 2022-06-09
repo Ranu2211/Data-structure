@@ -19,7 +19,7 @@ public:
             cur = cur->next;
             len++;
         }
-        
+       
         
         if(n>len)
             return head;

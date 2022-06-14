@@ -1,6 +1,6 @@
 class Solution {
 public:
-   vector<vector<int> >dp;
+    vector<vector<int> >dp;
 int minDistance(string& word1, string& word2) {
 	
 	dp.resize(size(word1) + 1, vector<int>(size(word2) + 1, 1000));

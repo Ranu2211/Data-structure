@@ -1,6 +1,6 @@
 class Solution {
 public:
-    bool isPossible(vector<int>& target) {
+   bool isPossible(vector<int>& target) {
     auto s = accumulate(begin(target), end(target), (long long)0);
     priority_queue<int> q(begin(target), end(target));
     while (s > 1 && q.top() > s / 2) {

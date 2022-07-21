@@ -14,13 +14,13 @@ public:
       
         ListNode* p = head;
         while(p && p->next){
-            ListNode* post =p->next;
-            if(p->val==post->val){
-                p->next = post->next;
+            //ListNode* post =p->next;
+            if(p->val==p->next->val){
+                p->next = p->next->next;
                
             }
             else {
-               p = post; 
+               p = p->next; 
             }
             
            

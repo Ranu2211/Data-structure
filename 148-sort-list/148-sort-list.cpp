@@ -26,9 +26,13 @@ public:
         }
         if(l1) {
 			cur->next = l1;
+            l1 = l1->next;
+            cur = cur->next;
 		}
         if(l2) {
 			cur->next = l2;
+             l2 = l2->next;
+            cur = cur->next;
 		}
         return temp->next;
     }

@@ -23,7 +23,7 @@ public:
         return isSameTree(p->left,q->left) && isSameTree(p->right,q->right);
     }
     bool isSubtree(TreeNode* root, TreeNode* subRoot) {
-        if(root==NULL )
+        if(root==NULL && subRoot!=NULL)
             return false;
         if( subRoot==NULL)
             return false;

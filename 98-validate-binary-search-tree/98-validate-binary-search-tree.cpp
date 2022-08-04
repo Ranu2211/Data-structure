@@ -10,22 +10,26 @@
  * };
  */
 class Solution {
-    
-    
+     private:
+    vector<int>tree;
 public:
-     bool isValidBST(TreeNode* root) {
-        return fun(root, NULL, NULL);
+   
+ void inorder(TreeNode* root){
+     if(root==NULL)
+         return;
+        inorder(root->left);
+        tree.push_back(root->val);
+        inorder(root->right);
+      
     }
-    
-    bool fun(TreeNode* root, TreeNode* max, TreeNode* min){
-        if(root==NULL){
-            return true;
+    bool isValidBST(TreeNode* root) {
+       if(root==NULL)
+           return true;
+        inorder(root);
+        for(int i=1;i<tree.size();i++){
+            if(tree[i]<=tree[i-1])
+                return false;
         }
-		// Using the same above logic
-		//Just check if max or min-node is NULL, then follow it as true
-if((min==NULL || root->val > min->val) && (max==NULL || root->val < max->val)){
-            return fun(root->left, root, min) && fun(root->right, max, root);
-        }
-        return false;
+        return true;
     }
 };

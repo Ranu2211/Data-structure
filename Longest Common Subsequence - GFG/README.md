@@ -1,7 +1,6 @@
 # Longest Common Subsequence
-## Medium 
-<div class="problem-statement">
-                <p></p><p><span style="font-size:18px">Given two sequences, find the length of longest subsequence present in both of them. Both&nbsp;the strings are of uppercase.</span></p>
+## Medium
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given two sequences, find the length of longest subsequence present in both of them. Both&nbsp;the strings are of uppercase.</span></p>
 
 <p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
 
@@ -33,5 +32,4 @@ Complete the function&nbsp;<strong>lcs()</strong>&nbsp;which takes the length of
 
 <p><span style="font-size:18px"><strong>Constraints:</strong><br>
 1&lt;=size(str1),size(str2)&lt;=10<sup>3</sup></span></p>
- <p></p>
-            </div>
+</div>

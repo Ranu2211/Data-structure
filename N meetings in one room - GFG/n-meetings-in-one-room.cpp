@@ -3,41 +3,33 @@
 using namespace std;
 
 // } Driver Code Ends
-
-struct meeting{
-    int start;
-    int end;
-    int pos;
-};
-bool comparator(struct meeting m1, meeting m2){
-    if(m1.end<m2.end) return true;
-    else if(m1.end>m2.end) return false;
-    else if(m1.pos<m2.pos) return true;
-    return false;
-}
 class Solution
 {
     public:
     //Function to find the maximum number of meetings that can
     //be performed in a meeting room.
-    int maxMeetings(int s[], int e[], int n)
+    
+static bool cmp(pair<int,int>a , pair<int,int>b){
+    return a.second<b.second;
+}
+    int maxMeetings(int start[], int end[], int n)
     {
-     struct meeting meet[n];
-     for(int i=0;i<n;i++){
-         meet[i].start=s[i], meet[i].end = e[i],
-         meet[i].pos = i+1;
-     }
-     sort(meet,meet+n,comparator);
-     vector<int>answer;
-     int limit = meet[0].end;
-     answer.push_back(meet[0].pos);
-     for(int i=1;i<n;i++){
-         if(meet[i].start>limit){
-             limit = meet[i].end;
-             answer.push_back(meet[i].pos);
-         }
-     }
-     return answer.size();
+       vector<pair<int,int>>v;
+       for(int i=0;i<n;i++){
+           pair<int,int>p = make_pair(start[i],end[i]);
+           v.push_back(p);
+       }
+       sort(v.begin(),v.end(),cmp);
+        int ans_end = v[0].second;
+        int count = 1;
+        for(int i=1;i<n;i++){
+            if(ans_end<v[i].first){
+                count++;
+                ans_end = v[i].second;
+            }
+        }
+       return count; 
+       
     }
 };
 
